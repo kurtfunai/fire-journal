@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Journal</title>
+  <!-- Lib CSS -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="app/css/global.css">
+</head>
+<body ng-app="journal">
+  <div class="container">
+    <div class="header">
+      <ul class="nav nav-pills pull-right">
+        <li class="active"><a href="#">Home</a></li>
+        <!-- <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li> -->
+      </ul>
+      <h3 class="text-muted">FireJournal</h3>
+    </div>
+    
+    <div class="jumbotron">
+      <h1>FireJournal</h1>
+      <p class="lead">For people that want to take notes, keep track of things, and let the journal-app keep track of all the annoying bookkeeping.</p>
+      <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+    </div>
+
+    <div class="row marketing">
+      <div class="col-lg-6">
+        <h4>Easily distinguishable notes</h4>
+        <p>Our note system allows you to easily sort through different types of notes.</p>
+
+        <h4>Automatic indexing</h4>
+        <p>We create a monthly index that details important events and key points of information.</p>
+
+        <!-- <h4>Subheading</h4>
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p> -->
+      </div>
+
+      <div class="col-lg-6">
+        <h4>Track unfinished tasks</h4>
+        <p>We automatically roll your unfinished tasks forward, so you never lose track.</p>
+
+        <h4>Full history</h4>
+        <p>Easily browse back to see what you did in past days, months, or years.</p>
+
+        <!-- <h4>Subheading</h4>
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p> -->
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><a href="http://kurtfunai.com">kurtfunai.com</a></p>
+    </div>
+
+  </div> <!-- /container -->
+  
+  <!-- JavaScripts Dependencies -->
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angularfire/angularfire.js"></script>
+
+  <!-- BootStrap -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!-- Journal App -->
+  <script src="app/js/journal.js"></script>
+</body>
+</html>
