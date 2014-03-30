@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div ng-repeat="note in notes">
+      <a ui-sref="notes.show({note: note})">{{note}}</a>
+    </div>
+  </div>
+
+  <!-- note info -->
+  <div class="col-sm-6">
+    <div ui-view></div>
+  </div>
+</div>
