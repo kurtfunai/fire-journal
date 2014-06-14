@@ -1,0 +1,50 @@
+<style>
+  .done-task {
+    color: green;
+  }
+  .streak-button {
+    font-size: 24px;
+  }
+</style>
+
+<h2>Team Tracker</h2>
+<h4 class="text-muted">{{today}}</h4>
+
+<br>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th class="col-md-3">Person</th>
+      <th ng-repeat="(dayKey, day) in recentDays">
+        <small>{{day}}</small>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="(personKey, person) in people">
+      <td>{{person.firstName}} {{person.lastName}}</td>
+      <td ng-repeat="(dayKey, day) in recentDays">
+        <!-- button to complete day -->
+        <button ng-click="completeDay(person, day)" ng-if="!hasCompletedDay(person, day)" class="btn btn-default streak-button">
+          <i class="fa fa-check-circle-o"></i>
+        </button>
+        <!-- already completed -->
+        <div ng-if="hasCompletedDay(person, day)" class="btn btn-success streak-button disabled">
+          <i class="fa fa-check-circle-o"></i>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<form name="people-form" class="form-inline" role="form">
+  <div class="form-group">
+    <input placeholder="First name" class="form-control" type="text" ng-model="person.firstName">
+  </div>
+  <div class="form-group">
+    <input placeholder="Last name" class="form-control" type="text" ng-model="person.lastName">
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit" ng-click="addPerson(person)">Add the person!</button>
+  </div>
+</form>
